@@ -1,18 +1,18 @@
 # BOSS 本机工作台安装包
 
-此仓库仅用于提供安装包与校验值，不存放开发仓库或客户数据。
+这里提供客户安装包，源码仓库保持私有，不存放客户业务数据。
 
-当前安装包为候选版本：Windows 5.0.3、Mac 5.0.2。两平台版本不同，请按自己的系统选择。下载地址以 Releases 页面为准；候选包尚在核验时不会作为正式版本推广。
+| 电脑 | 当前可下载候选 | 安装方式 |
+|---|---|---|
+| Windows x64 | [5.0.5 安装包](https://github.com/INZAGHI-9/boss-workbench-downloads/releases/download/v5.0.5/BossWorkbench-5.0.5-win-x64.exe) | 先安全退出已有工作台，再运行 EXE，保留原数据安装。 |
+| Mac M 系列 | [5.0.2 安装包](https://github.com/INZAGHI-9/boss-workbench-downloads/releases/download/candidate-2026-10-26/BossWorkbench-5.0.2-mac-arm64.dmg) | 打开 DMG，将应用拖入 Applications；新版升级流程待 Mac 实机确认。 |
 
-安装方法：
+均为测试候选，尚未作为正式版本推广。Windows 5.0.4→5.0.5 已在 Windows 11 x64 通过真实公开下载、应用内升级、新工作台确认和隔离历史保留检查；本机原数据重开结果见交付记录。Mac 5.0.2 沿用已有安装验收和用户正常使用反馈，不代表 Mac 新版升级已通过。
 
-- Windows x64：下载 `BossWorkbench-5.0.3-win-x64.exe`，安全退出已有工作台后安装。
-- Mac Apple Silicon（M 系列）：下载 `BossWorkbench-5.0.2-mac-arm64.dmg`，打开后将应用拖入“应用程序”。ZIP 供更新工具使用。
-- 安装包已包含所需运行环境，不必安装 Node、Python、数据库或 Git。
-- 已有用户保留原数据安装，不要删除数据目录。安装或重开不会自动续跑招聘任务。
+Windows 5.0.5 内置本仓库的匿名更新来源。旧 Windows 5.0.3 和 Mac 5.0.2 尚无此来源，须手动安装具备来源的新候选。更新频道目前仅提供 Windows；后续补充验收通过的 Mac 5.0.5。校验值见各候选附件 `SHA256SUMS.txt`。
 
-兼容范围：Windows 10 x64 1903+ / Windows 11 x64；Mac M 系列 macOS 14+。普通客户机全部系统组合尚未验证。Windows 包未签名，Mac 包未公证。
+安装包自带 Python、Node 和数据库，客户无需开发工具。首次启用浏览器在缺少 Chrome 或缓存时可能需要联网；模型和 BOSS 日常使用也需要相应网络和账户。更新不会自动恢复招聘任务，请保留原数据目录。
 
-当前候选内尚未配置在线更新来源，使用手动下载安装；不会自动从本仓库取得更新。Windows 5.0.3 的本机安装、原数据保留、启动、安全退出及重开已有通过记录。Mac 5.0.2 的安装启动已有验证和用户反馈；应用内跨版本更新仍待最终验收。
+目标系统：Windows 10 x64 1903+、Windows 11 x64；Mac M 系列 macOS 14+。本机 Windows 11 及已有 Windows Server 2025/macOS 15 原生记录不代表所有客户系统组合均已实测。Windows 包未签名，Mac 包未公证，请遵循电脑的安全策略。
 
-安装文件的 SHA-256 校验值随候选附件提供。此下载仓库不提供开源许可证。
+安装所需程序文件可被提取；保持 Git 源码仓库私有不代表安装包具备防逆向能力。本仓库不提供源码访问凭证。
