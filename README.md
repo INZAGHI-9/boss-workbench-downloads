@@ -1,18 +1,18 @@
-# BOSS 本机工作台安装包
+# BOSS 招聘工作台安装包
 
-这里提供客户安装包，源码仓库保持私有，不存放客户业务数据。
+这里提供客户安装包。源码仓库保持私有；客户下载无需源码仓库权限，仓库不存放客户业务数据或凭证。
 
-| 电脑 | 当前正式版本 | 安装方式 |
+| 系统 | 当前正式版本 | 安装方式 |
 |---|---|---|
-| Windows x64 | [5.1.0 安装包](https://github.com/INZAGHI-9/boss-workbench-downloads/releases/download/v5.1.0/BossWorkbench-5.1.0-win-x64.exe) | 先从托盘安全退出已有工作台，再运行 EXE，保留原数据安装。 |
-| Mac M 系列 | [5.1.0 安装包](https://github.com/INZAGHI-9/boss-workbench-downloads/releases/download/v5.1.0/BossWorkbench-5.1.0-mac-arm64.dmg) | 先从菜单栏安全退出，再打开 DMG，将应用拖入 Applications。 |
+| Windows x64 | [6.1.1 安装包](https://github.com/INZAGHI-9/boss-workbench-downloads/releases/download/v6.1.1/BossWorkbench-6.1.1-win-x64.exe) | 从托盘安全退出现有工作台，再运行 EXE，保留原数据。 |
+| Mac M 系列 | [6.1.1 安装包](https://github.com/INZAGHI-9/boss-workbench-downloads/releases/download/v6.1.1/BossWorkbench-6.1.1-mac-arm64.dmg) | 从菜单栏安全退出，再打开 DMG，将应用拖入 Applications。 |
 
-[发布说明、全部附件及 SHA256SUMS](https://github.com/INZAGHI-9/boss-workbench-downloads/releases/tag/v5.1.0)。两端自动更新频道现为 5.1.0；旧版未内置本仓库来源时，请先手动安装一次。CDN 可能短时缓存旧清单，直接下载链接可用。
+[发布说明、全部附件与校验收据](https://github.com/INZAGHI-9/boss-workbench-downloads/releases/tag/v6.1.1)。客户端更新频道现为同版本 Windows / Mac 6.1.1；仅具备兼容更新合同的旧客户端适用。Windows 完整校验见 `windows-SHA256SUMS.txt`。
 
-用户已确认核心安装升级验收：Windows 5.0.4→5.0.5 与 Mac 5.0.8→5.0.9 按各自实际产物记录；5.1.0 两端发行包分别经过本机运行时及合成数据核验，不把这些检查扩大为所有客户系统均已实测。Windows 构建摘要见附件 windows-build-summary.json。
+已装 Mac 6.1.0 的旧更新器元数据有误，请安全退出后以 DMG 覆盖应用；其数据库已为结构4，无需迁移。旧6.0.0不能仅凭新清单直接跨结构升级，覆盖应用也不授予数据库迁移许可，需后续桥接或显式迁移路径。
 
-安装包自带 Python、Node 和数据库，客户无需开发工具。首次启用浏览器在缺少 Chrome 或缓存时可能需要联网；模型和 BOSS 日常使用也需要相应网络和账户。更新不会自动恢复招聘任务，请保留原数据目录。
+6.1.1 两端包均已核对最终资源、远端大小与 SHA-256；隔离运行时启动/安全退出和两条合成业务流程通过，Windows另完成解包实包GUI检查。NSIS原生安装/卸载、旧版本跨结构安装升级尚未验收；历史版本的安装记录不替代本版验收。Mac为ad-hoc签封且未公证，Windows未签名。
 
-目标系统：Windows 10 1903+ x64、Windows 11 x64；Mac M 系列 macOS 14+。Windows 包未签名，Mac 包未公证，请遵循电脑的安全策略。
+安装包自带 Python、Node 和数据库，客户无需开发工具。首次启动下载缺失浏览器组件、使用模型和 BOSS 仍需网络及相应账户。更新不自动恢复招聘任务，请保留原数据目录。
 
-程序文件可以从安装包提取；保持 Git 源码仓库私有不代表安装包具备防逆向能力。本仓库不提供源码访问凭证。
+目标系统：Windows 10 1903+ x64、Windows 11 x64；Mac M 系列 macOS 14+。程序文件可从安装包提取，Git源码仓库私有不代表安装包具备源码保密能力。
