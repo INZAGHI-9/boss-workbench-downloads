@@ -5,13 +5,13 @@
 | 系统 | 当前正式版本 | 安装方式 |
 |---|---|---|
 | Windows x64 | [6.1.2 安装包](https://github.com/INZAGHI-9/boss-workbench-downloads/releases/download/v6.1.2/BossWorkbench-6.1.2-win-x64.exe) | 从托盘安全退出，再运行 EXE，保留原数据。 |
-| Mac M 系列 | [6.2.0 安装包](https://github.com/INZAGHI-9/boss-workbench-downloads/releases/download/v6.2.0/BossWorkbench-6.2.0-mac-arm64.dmg) | 从菜单栏安全退出，再打开 DMG，将应用拖入 Applications。 |
+| Mac M 系列 | [6.2.1 安装包](https://github.com/INZAGHI-9/boss-workbench-downloads/releases/download/v6.2.1/BossWorkbench-6.2.1-mac-arm64.dmg) | 从菜单栏安全退出，再打开 DMG，将应用拖入 Applications。 |
 
-[Mac 6.2.0 发布说明、附件与校验收据](https://github.com/INZAGHI-9/boss-workbench-downloads/releases/tag/v6.2.0)。Mac 独立更新频道提供 6.2.0；Windows/共享频道保持 6.1.2。
+[Mac 6.2.1 发布说明、附件与校验收据](https://github.com/INZAGHI-9/boss-workbench-downloads/releases/tag/v6.2.1)。Mac 独立更新频道提供 6.2.1；Windows/共享频道保持 6.1.2。
 
-Mac 6.2.0 新增精准寻访三阶段流程，统一名单、简历浮窗、任务进度、报告与提醒。搜索配置按岗位保存和读取，新任务依据最新保存的画像；已确认收藏的成果在停止后仍可复用，由用户选人并确认联系。
+Mac 6.2.1 修复人工校准的岗位背景没有完整传给评分模型的问题：新保存的背景随策略冻结，供主审、必要复核和重评读取，显式清空生效。评分权重、公式、复核和动作规则保持不变，旧任务和历史评分不追写。已有岗位重新保存画像后，新任务使用最新背景。
 
-Mac 6.1.2–6.1.5 通过独立差量链升级，历史差量在后台连续应用，最终只安装一次最新版。旧 Mac 6.1.1 先升级至过渡 6.1.2，再检查独立频道；6.1.0 的旧更新器元数据有误，应安全退出后手动覆盖安装。6.2.0 涉及 schema4→10 数据库升级，未知结构和身份冲突仍拒绝，不手工改库或删除旧数据。本次保留历史安装附件和差量。
+Mac 6.2.0 通过相邻差量升级至 6.2.1；6.1.2–6.1.5 通过独立差量链升级，历史差量在后台连续应用，最终只安装一次最新版。旧 Mac 6.1.1 先升级至过渡 6.1.2，再检查独立频道；6.1.0 的旧更新器元数据有误，应安全退出后手动覆盖安装。6.2.1 不新增数据库迁移；旧于 6.2.0 的版本仍涉及 schema4→10 数据库升级，未知结构和身份冲突仍拒绝，不手工改库或删除旧数据。本次保留历史安装附件和差量。
 
 最终资源、DMG、严格签封和远端大小/SHA-256已核对；隔离原版更新器回放及公开频道验证见附件收据。真实 GUI 安装、新版服务现场确认与真实招聘未计为通过。Mac 为 ad-hoc 签封且未公证，Windows 未签名。校验见各版 `macos-SHA256SUMS.txt` 或 `windows-SHA256SUMS.txt`。
 
